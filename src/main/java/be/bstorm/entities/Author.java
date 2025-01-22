@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Author {
 
-    private Long id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private LocalDateTime birthDate;
@@ -19,7 +19,7 @@ public class Author {
         this.birthDate = birthDate;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

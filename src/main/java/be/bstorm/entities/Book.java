@@ -4,21 +4,32 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Book {
+
+    private Integer id;
     private String isbn;
     private String title;
     private String description;
     private LocalDateTime releaseDate;
-    private Long authorId;
+    private Integer authorId;
 
     public Book() {
     }
 
-    public Book(String isbn, String title, String description, LocalDateTime releaseDate, Long authorId) {
+    public Book(String isbn, String title, String description, LocalDateTime releaseDate, Integer authorId) {
         this.isbn = isbn;
         this.title = title;
         this.description = description;
         this.releaseDate = releaseDate;
         this.authorId = authorId;
+    }
+
+    public Book(Integer id, String isbn, String title, String description, LocalDateTime releaseDate, Integer authorId) {
+        this(isbn, title, description, releaseDate, authorId);
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getIsbn() {
@@ -53,11 +64,11 @@ public class Book {
         this.releaseDate = releaseDate;
     }
 
-    public Long getAuthorId() {
+    public Integer getAuthorId() {
         return authorId;
     }
 
-    public void setAuthorId(Long authorId) {
+    public void setAuthorId(Integer authorId) {
         this.authorId = authorId;
     }
 
