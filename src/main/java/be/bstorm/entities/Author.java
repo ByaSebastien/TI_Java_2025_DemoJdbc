@@ -1,6 +1,6 @@
 package be.bstorm.entities;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Author {
@@ -8,12 +8,12 @@ public class Author {
     private Integer id;
     private String firstName;
     private String lastName;
-    private LocalDateTime birthDate;
+    private LocalDate birthDate;
 
     public Author() {
     }
 
-    public Author(String firstName, String lastName, LocalDateTime birthDate) {
+    public Author(String firstName, String lastName, LocalDate birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
@@ -39,11 +39,11 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public LocalDateTime getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDateTime birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 

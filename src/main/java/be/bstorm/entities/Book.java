@@ -1,6 +1,6 @@
 package be.bstorm.entities;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Book {
@@ -9,13 +9,13 @@ public class Book {
     private String isbn;
     private String title;
     private String description;
-    private LocalDateTime releaseDate;
+    private LocalDate releaseDate;
     private Integer authorId;
 
     public Book() {
     }
 
-    public Book(String isbn, String title, String description, LocalDateTime releaseDate, Integer authorId) {
+    public Book(String isbn, String title, String description, LocalDate releaseDate, Integer authorId) {
         this.isbn = isbn;
         this.title = title;
         this.description = description;
@@ -23,7 +23,7 @@ public class Book {
         this.authorId = authorId;
     }
 
-    public Book(Integer id, String isbn, String title, String description, LocalDateTime releaseDate, Integer authorId) {
+    public Book(Integer id, String isbn, String title, String description, LocalDate releaseDate, Integer authorId) {
         this(isbn, title, description, releaseDate, authorId);
         this.id = id;
     }
@@ -56,11 +56,11 @@ public class Book {
         this.description = description;
     }
 
-    public LocalDateTime getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(LocalDateTime releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
 
