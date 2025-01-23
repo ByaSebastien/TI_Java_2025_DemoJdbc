@@ -9,7 +9,7 @@ public class Book {
     private String isbn;
     private String title;
     private String description;
-    private LocalDate releaseDate;
+    private LocalDate release_date;
     private Integer authorId;
 
     public Book() {
@@ -19,7 +19,7 @@ public class Book {
         this.isbn = isbn;
         this.title = title;
         this.description = description;
-        this.releaseDate = releaseDate;
+        this.release_date = releaseDate;
         this.authorId = authorId;
     }
 
@@ -56,12 +56,12 @@ public class Book {
         this.description = description;
     }
 
-    public LocalDate getReleaseDate() {
-        return releaseDate;
+    public LocalDate getRelease_date() {
+        return release_date;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setRelease_date(LocalDate release_date) {
+        this.release_date = release_date;
     }
 
     public Integer getAuthorId() {
@@ -77,12 +77,12 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(isbn, book.isbn) && Objects.equals(title, book.title) && Objects.equals(description, book.description) && Objects.equals(releaseDate, book.releaseDate) && Objects.equals(authorId, book.authorId);
+        return Objects.equals(isbn, book.isbn) && Objects.equals(title, book.title) && Objects.equals(description, book.description) && Objects.equals(release_date, book.release_date) && Objects.equals(authorId, book.authorId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(isbn, title, description, releaseDate, authorId);
+        return Objects.hash(isbn, title, description, release_date, authorId);
     }
 
     @Override
@@ -91,7 +91,7 @@ public class Book {
                 "isbn='" + isbn + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", releaseDate=" + releaseDate +
+                ", releaseDate=" + release_date +
                 ", authorId=" + authorId +
                 '}';
     }
