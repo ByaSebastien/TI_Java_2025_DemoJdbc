@@ -11,6 +11,7 @@ public class Book {
     private String description;
     private LocalDate release_date;
     private Integer authorId;
+    private Author author;
 
     public Book() {
     }
@@ -72,6 +73,14 @@ public class Book {
         this.authorId = authorId;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -88,11 +97,12 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "isbn='" + isbn + '\'' +
+                "id=" + id +
+                ", isbn='" + isbn + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", releaseDate=" + release_date +
-                ", authorId=" + authorId +
+                ", release_date=" + release_date +
+                ", author=" + author +
                 '}';
     }
 }

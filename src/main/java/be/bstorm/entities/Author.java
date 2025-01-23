@@ -19,6 +19,11 @@ public class Author {
         this.birthDate = birthDate;
     }
 
+    public Author(Integer id, String firstName, String lastName, LocalDate birthDate) {
+        this(firstName, lastName, birthDate);
+        this.id = id;
+    }
+
     public Integer getId() {
         return id;
     }

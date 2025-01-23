@@ -16,14 +16,6 @@ public class Main {
 
         BookRepository bookRepository = new BookRepositoryImpl();
 
-        Book book = new Book("10987654321","Update",null, LocalDate.now(),1);
-
-        bookRepository.save(book);
-
-        RappelGenerique<Book> rg = new RappelGenerique<>();
-
-        RappelGenerique<Author> rg2 = new RappelGenerique<>();
-
-        List<Integer> ints = new ArrayList<>();
+        bookRepository.findAllWithAuthor().forEach(System.out::println);
     }
 }
